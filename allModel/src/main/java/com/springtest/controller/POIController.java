@@ -100,7 +100,7 @@ public class POIController {
 		try {
 			out = response.getOutputStream();
 			String headerStr ="用户下载测试表";
-		 headerStr =new String(headerStr.getBytes("gb2312"), "ISO8859-1");//headerString为中文时转码
+		 headerStr =new String(headerStr.getBytes("utf-8"), "ISO8859-1");//headerString为中文时转码
 			 response.setHeader("Content-disposition","attachment; filename="+    headerStr+".xls");//filename是下载的xls的名，建议最好用英文
 			 response.setContentType("application/msexcel;charset=UTF-8");//设置类型
 		 response.setHeader("Pragma","No-cache");//设置头
